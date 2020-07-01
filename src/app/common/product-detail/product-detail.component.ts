@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit {
+  product: any;
 
   constructor() { }
 
