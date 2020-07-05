@@ -1,7 +1,16 @@
 <div class="container">
   <div class="row row-cols-4 mx-md-n5">
-    <div *ngFor=' let product of products' class="col-sm">
-      <app-product-detail></app-product-detail>
+    <div *ngFor=' let product of products; let productId = index;' class="col-sm">
+      <a class="link" [routerLink]="[productId]">
+        <div class="card" style="width: 18rem;">
+          <img src="../../../assets/img/placeholder-300x200.png" class="card-img-top">
+          <div class="card-body">
+            <p class="card-text">
+              {{product.name}}
+            </p>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
 </div>
