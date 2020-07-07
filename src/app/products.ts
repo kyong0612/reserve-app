@@ -5,7 +5,9 @@ export const products = [
     description: 'A large phone with one of the best screens',
     heading1: 'sample heading 1',
     heading2: 'sample heading 2',
-    heading3: 'sample heading 3'
+    heading3: 'sample heading 3',
+    coverimg: "./assets/img/phone-cover.jpg",
+    topimg:"https://picsum.photos/100/100"
   },
   {
     name: 'Phone Mini',
@@ -13,7 +15,9 @@ export const products = [
     description: 'A great phone with one of the best cameras',
     heading1: 'sample heding 1',
     heading2: 'sample heading 2',
-    heading3: 'sample heading 3'
+    heading3: 'sample heading 3',
+    coverimg: "./assets/img/phone-cover.jpg",
+    topimg: "https://picsum.photos/100/100"
   },
   {
     name: 'Phone Standard',
@@ -21,7 +25,9 @@ export const products = [
     description: 'サンプルテキスト',
     heading1: 'サンプルテキスト',
     heading2: 'サンプルテキスト',
-    heading3: 'サンプルテキスト'
+    heading3: 'サンプルテキスト',
+    coverimg: "./assets/img/phone-cover.jpg",
+    topimg: "https://picsum.photos/100/100"
   },
   {
     name: 'Phone special',
@@ -29,7 +35,9 @@ export const products = [
     description: 'this is the special,amazing,phone',
     heading1: 'sample heding 1',
     heading2: 'sample heading 2',
-    heading3: 'sample heading 3'
+    heading3: 'sample heading 3',
+    coverimg: "./assets/img/phone-cover.jpg",
+    topimg: "https://picsum.photos/100/100"
   }
 ];
 
