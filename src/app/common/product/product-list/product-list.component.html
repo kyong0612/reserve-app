@@ -3,7 +3,7 @@
     <div *ngFor=' let product of products; let productId = index;' class="col-sm">
       <a class="link" [routerLink]="[productId]">
         <div class="card" style="width: 18rem;">
-          <img src="../../../assets/img/placeholder-300x200.png" class="card-img-top">
+          <img src="{{product.topimg}}" class="card-img-top">
           <div class="card-body">
             <p class="card-text">
               {{product.name}}
