@@ -1,7 +1,7 @@
 //webサーバのフレームワーク
 const express = require('express')
 //mongoDBサーバのフレームワーク
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const config = require('./config/dev')
 
