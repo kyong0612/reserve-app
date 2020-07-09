@@ -1,12 +1,12 @@
-const Schema = mongoose.Schema;
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 // const ObjectId = Schema.ObjectId;
 
 const ProductsSchema = new Schema({
   // author: ObjectId,
   coverimg: String,
   name: {
-    type: Stringm,
+    type: String,
     required: true,
     max: [60, '最大60文字までです']
   },
@@ -20,4 +20,4 @@ const ProductsSchema = new Schema({
   headingtext3: String,
 });
 
-module.exports = mongoose.module('Product', ProductsSchema)
+module.exports = mongoose.model('Product', ProductsSchema)
