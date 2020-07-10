@@ -4,7 +4,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 
 const config = require('./config/dev')
-const FakeDb = require('./fake-db')
+const FakeDb = require('./sample-db')
 
 
 mongoose.connect(config.DB_URI, {
@@ -13,7 +13,7 @@ mongoose.connect(config.DB_URI, {
 }).then(
   () => {
     const fakeDb = new FakeDb()
-    fakeDb.seeDb()
+    fakeDb.initDB()
   }
 )
 

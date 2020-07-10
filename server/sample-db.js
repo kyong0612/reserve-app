@@ -1,4 +1,5 @@
 const Product = require('./model/product')
+const product = require('./model/product')
 
 
 class fakeDb {
@@ -53,6 +54,15 @@ class fakeDb {
       topimg: "https://picsum.photos/100/100"
     }]
   }
+
+  async initDB() {
+    await this.cleanDB()
+   this.pushProductsToDb()
+  }
+
+  async cleanDB() {
+  await product.deleteMany({})
+}
 
   pushProductsToDb() {
     this.products.forEach(
