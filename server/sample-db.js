@@ -1,8 +1,7 @@
 const Product = require('./model/product')
-const product = require('./model/product')
 
 
-class fakeDb {
+class sampledb {
   constructor() {
     this.products = [{
       name: 'Phone XL',
@@ -61,7 +60,7 @@ class fakeDb {
   }
 
   async cleanDB() {
-  await product.deleteMany({})
+  await Product.deleteMany({})
 }
 
   pushProductsToDb() {
@@ -78,4 +77,4 @@ class fakeDb {
   }
 }
 
-module.exports = fakeDb
+module.exports = sampledb

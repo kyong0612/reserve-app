@@ -4,7 +4,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 
 const config = require('./config/dev')
-const FakeDb = require('./sample-db')
+const sampledb = require('./sample-db')
 
 const productRoutes = require('./routes/products')
 
@@ -15,8 +15,8 @@ mongoose.connect(config.DB_URI, {
   useUnifiedTopology: true
 }).then(
   () => {
-    const fakeDb = new FakeDb()
-    fakeDb.initDB()
+    const sampleDb = new sampledb()
+    sampleDb.initDB()
   }
 )
 
