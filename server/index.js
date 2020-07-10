@@ -6,6 +6,9 @@ const mongoose = require('mongoose')
 const config = require('./config/dev')
 const FakeDb = require('./sample-db')
 
+const productRoutes = require('./routes/products')
+
+
 
 mongoose.connect(config.DB_URI, {
   useNewUrlParser: true,
@@ -17,13 +20,17 @@ mongoose.connect(config.DB_URI, {
   }
 )
 
+
 const app = express()
 
-app.get('/products', function (req, res) {
-  res.json({
-    'success': true
-  })
-})
+app.use('/app/v1/product',productRoutes)
+
+
+// app.get('/products', function (req, res) {
+//   res.json({
+//     'success': true
+//   })
+// })
 
 //AWSなどデプロイ環境に対応
 const PORT = process.env.PORT || '3001'
