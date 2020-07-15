@@ -3,20 +3,21 @@ const express = require('express')
 //mongoDBサーバのフレームワーク
 const mongoose = require('mongoose')
 
-const config = require('./config/dev')
+const config = require('./config/index') //index省略可
 const sampledb = require('./sample-db')
 
 const productRoutes = require('./routes/products')
-
-
+const path = require('path')
 
 mongoose.connect(config.DB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(
   () => {
-    const sampleDb = new sampledb()
-    sampleDb.initDB()
+    if (process.env.NODE_ENV !== 'production') {
+      const sampleDb = new sampledb()
+      // sampleDb.initDB()
+    }
   }
 )
 
@@ -24,6 +25,17 @@ mongoose.connect(config.DB_URI, {
 const app = express()
 
 app.use('/api/v1/products', productRoutes)
+
+
+if (process.env.NODE_ENV === 'production') {
+  // app.dist呼び出し
+  const appPath = path.join(__dirname, '..', 'dist', 'reservation-app')
+  app.use(express.static(appPath))
+  app.get("*", function (req, res) {
+    res.sendFile(Path.resolve(appPath, 'index.html'))
+  })
+}
+
 
 
 // app.get('/products', function (req, res) {

@@ -1,9 +1,13 @@
 {
   "name": "reservation-app",
   "version": "0.0.0",
+  "engines": {
+    "node": "14.3.0",
+    "npm": "6.14.5"
+  },
   "scripts": {
     "ng": "ng",
-    "start": "npm run start --prefix surver",
+    "start": "npm run start --prefix server",
     "start-dev": "ng serve --proxy-config proxy.conf.json --open",
     "build": "ng build --prod",
     "test": "ng test",
