@@ -3,8 +3,6 @@ const Schema = mongoose.Schema
 // const ObjectId = Schema.ObjectId;
 
 const ProductsSchema = new Schema({
-  // author: ObjectId,
-  coverimg: String,
   name: {
     type: String,
     required: true,
@@ -18,6 +16,8 @@ const ProductsSchema = new Schema({
   headingtext1: String,
   headingtext2: String,
   headingtext3: String,
+  coverimg: String,
+  topimg: String
 });
 
 module.exports = mongoose.model('Product', ProductsSchema)

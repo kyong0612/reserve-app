@@ -2,7 +2,11 @@
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
-const { SpecReporter, StacktraceOption } = require('jasmine-spec-reporter');
+// @ts-ignore
+const {
+  SpecReporter,
+  StacktraceOption
+} = require('jasmine-spec-reporter');
 
 /**
  * @type { import("protractor").Config }
@@ -13,7 +17,10 @@ exports.config = {
     './src/**/*.e2e-spec.ts'
   ],
   capabilities: {
-    browserName: 'chrome'
+    browserName: 'chrome',
+    chromeOptions: {
+      args: ["--headless", "--disable-gpu", "--window-size=800,600", "--disable-dev-shm-usage", "--no-sandbox"]
+    }
   },
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
@@ -21,7 +28,7 @@ exports.config = {
   jasmineNodeOpts: {
     showColors: true,
     defaultTimeoutInterval: 30000,
-    print: function() {}
+    print: function () {}
   },
   onPrepare() {
     require('ts-node').register({
