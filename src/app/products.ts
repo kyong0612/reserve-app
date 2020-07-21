@@ -7,7 +7,7 @@ export const products = [
     heading2: 'sample heading 2',
     heading3: 'sample heading 3',
     coverimg: "./assets/img/phone-cover.jpg",
-    topimg:"https://picsum.photos/100/100"
+    topimg: "./assets/img/phone-cover.jpg"
   },
   {
     name: 'Phone Mini',
@@ -17,7 +17,7 @@ export const products = [
     heading2: 'sample heading 2',
     heading3: 'sample heading 3',
     coverimg: "./assets/img/phone-cover.jpg",
-    topimg: "https://picsum.photos/100/100"
+    topimg: "./assets/img/phone-cover.jpg"
   },
   {
     name: 'Phone Standard',
@@ -27,7 +27,7 @@ export const products = [
     heading2: 'サンプルテキスト',
     heading3: 'サンプルテキスト',
     coverimg: "./assets/img/phone-cover.jpg",
-    topimg: "https://picsum.photos/100/100"
+    topimg: "./assets/img/phone-cover.jpg"
   },
   {
     name: 'Phone special',
@@ -37,7 +37,7 @@ export const products = [
     heading2: 'sample heading 2',
     heading3: 'sample heading 3',
     coverimg: "./assets/img/phone-cover.jpg",
-    topimg: "https://picsum.photos/100/100"
+    topimg: "./assets/img/phone-cover.jpg"
   }
 ];
 

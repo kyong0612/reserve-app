@@ -14,7 +14,7 @@ class sampledb {
       headingtext2: 'bbbbbb',
       headingtext3: 'cccccc',
       coverimg: "./assets/img/phone-cover.jpg",
-      topimg: "https://picsum.photos/100/100"
+      topimg: "./assets/img/phone-cover.jpg"
     }, {
       name: 'Phone Mini',
       price: 699,
@@ -26,7 +26,7 @@ class sampledb {
       headingtext2: 'bbbbbb',
       headingtext3: 'cccccc',
       coverimg: "./assets/img/phone-cover.jpg",
-      topimg: "https://picsum.photos/100/100"
+      topimg: "./assets/img/phone-cover.jpg"
     }, {
       name: 'Phone Standard',
       price: 299,
@@ -38,7 +38,7 @@ class sampledb {
       headingtext2: 'bbbbbb',
       headingtext3: 'cccccc',
       coverimg: "./assets/img/phone-cover.jpg",
-      topimg: "https://picsum.photos/100/100"
+      topimg: "./assets/img/phone-cover.jpg"
     }, {
       name: 'Phone special',
       price: 999,
@@ -50,7 +50,7 @@ class sampledb {
       headingtext2: 'bbbbbb',
       headingtext3: 'cccccc',
       coverimg: "./assets/img/phone-cover.jpg",
-      topimg: "https://picsum.photos/100/100"
+      topimg: "./assets/img/phone-cover.jpg"
     }]
   }
 
