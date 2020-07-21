@@ -51,7 +51,7 @@ if (process.env.NODE_ENV === 'production') {
 //   })
 // })
 
-//AWSなどデプロイ環境に対応
+//herokuデプロイ環境に対応
 const PORT = process.env.PORT || '3001'
 
 app.listen(PORT, function () {
