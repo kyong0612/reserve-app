@@ -12,6 +12,10 @@
   "include": [
     "src/**/*.d.ts",
     "src/app/common/product/product.module.ts",
-    "src/app/common/product/shared/product.service.ts"
+    "src/app/common/product/shared/product.service.ts",
+    "src/app/auth/login/login.component.ts",
+    "src/app/auth/register/register.component.ts",
+    "src/app/auth/shared/auth.service.ts",
+    "src/app/auth/auth.module.ts"
   ]
 }
