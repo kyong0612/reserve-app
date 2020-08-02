@@ -2,16 +2,20 @@
 const express = require('express')
 //mongoDBサーバのフレームワーク
 const mongoose = require('mongoose')
+//POSTリクエストフレームワーク
+const bodyParser = require('body-parser')
 
 const config = require('./config/index') //index省略可
 const sampledb = require('./sample-db')
 
 const productRoutes = require('./routes/products')
+const userRoutes = require('./routes/users')
 const path = require('path')
 
 mongoose.connect(config.DB_URI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex: true
 }).then(
   () => {
     if (process.env.NODE_ENV !== 'production') {
@@ -23,8 +27,10 @@ mongoose.connect(config.DB_URI, {
 
 
 const app = express()
+app.use(bodyParser.json())
 
 app.use('/api/v1/products', productRoutes)
+app.use('/api/v1/users', userRoutes)
 
 
 if (process.env.NODE_ENV === 'production') {

@@ -38,6 +38,18 @@
                 </div>
                 <input type="text" class="form-control" placeholder="パスワード" (focus)="focus1=true" (blur)="focus1=false">
               </div>
+
+              <label>パスワード確認</label>
+              <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="nc-icon nc-key-25"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="パスワード確認" (focus)="focus1=true"
+                  (blur)="focus1=false">
+              </div>
+
               <button class="btn btn-danger btn-block btn-round">登録</button>
             </form>
             <div class="forgot">

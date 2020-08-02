@@ -3,7 +3,7 @@ const router = express.Router()
 const Product = require('../model/product')
 
 
-
+//サーバーサイドhttp:GETテスト
 router.get('/test', function (req, res) {
   res.json({
     'success': true
@@ -11,8 +11,8 @@ router.get('/test', function (req, res) {
 })
 
 router.get('', function (req, res) {
-  Product.find({}, function (err, fundProducts) {
-    return res.json(fundProducts)
+  Product.find({}, function (err, foundProducts) {
+    return res.json(foundProducts)
   })
 })
 
