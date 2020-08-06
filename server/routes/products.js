@@ -3,7 +3,7 @@ const router = express.Router()
 const Product = require('../model/product')
 
 
-
+//サーバーサイドhttp:GETテスト
 router.get('/test', function (req, res) {
   res.json({
     'success': true
@@ -11,8 +11,8 @@ router.get('/test', function (req, res) {
 })
 
 router.get('', function (req, res) {
-  Product.find({}, function (err, fundProducts) {
-    return res.json(fundProducts)
+  Product.find({}, function (err, foundProducts) {
+    return res.json(foundProducts)
   })
 })
 
@@ -21,7 +21,7 @@ router.get('/:productId', function (req, res) {
   Product.findById(productId, function (err, fundProduct) {
     if (err) {
       return res.status(422).send({
-        erros: [{
+        errors: [{
           title: 'Product erro',
           detail: 'Product not found!'
         }]

@@ -24,10 +24,12 @@ export class ProductDetailComponent implements OnInit {
       // this.product = this.productService.getProductById(params.get('productId'));
       const productObservable = this.productService.getProductById(params.get('productId'));
       productObservable.subscribe(
-        (data) => { 
+        (data) => {
           this.product = data
         },
-        (error) => { }
+        (error) => {
+          console.log("エラー発生")
+        }
       )
 
     });
