@@ -42,7 +42,7 @@ if (process.env.NODE_ENV === 'production') {
   })
 }
 
-// // 開発用
+// // 開発用、npm startにてフルスタック起動
 // const appPath = path.join(__dirname, '..', 'dist', 'reservation-app')
 // app.use(express.static(appPath))
 // app.get("*", function (req, res) {
