@@ -21,7 +21,7 @@ router.post('/login', function (req, res) {
 
   if (!email) {
     return res.status(422).send({
-      erros: [{
+      errors: [{
         title: 'user error',
         detail: 'please fill email!'
       }]
@@ -30,7 +30,7 @@ router.post('/login', function (req, res) {
 
   if (!password) {
     return res.status(422).send({
-      erros: [{
+      errors: [{
         title: 'user error',
         detail: 'please fill password!'
       }]
@@ -44,7 +44,7 @@ router.post('/login', function (req, res) {
     //ついでのエラーハンドラー
     if (err) {
       return res.status(422).send({
-        erros: [{
+        errors: [{
           title: 'user error',
           detail: 'something went worng!'
         }]
@@ -53,7 +53,7 @@ router.post('/login', function (req, res) {
     //登録済みemailか確認
     if (!foundUser) {
       return res.status(422).send({
-        erros: [{
+        errors: [{
           title: 'user error',
           detail: 'this email no exist!'
         }]
@@ -62,7 +62,7 @@ router.post('/login', function (req, res) {
 
     if (!foundUser.hasSamePassword(password)) {
       return res.status(422).send({
-        erros: [{
+        errors: [{
           title: 'user error',
           detail: 'password incrected!'
         }]
@@ -97,7 +97,7 @@ router.post('/register', function (req, res) {
 
   if (!name) {
     return res.status(422).send({
-      erros: [{
+      errors: [{
         title: 'user error',
         detail: 'please fill name!'
       }]
@@ -105,7 +105,7 @@ router.post('/register', function (req, res) {
   }
   if (!email) {
     return res.status(422).send({
-      erros: [{
+      errors: [{
         title: 'user error',
         detail: 'please fill email!'
       }]
@@ -113,7 +113,7 @@ router.post('/register', function (req, res) {
   }
   if (!password) {
     return res.status(422).send({
-      erros: [{
+      errors: [{
         title: 'user error',
         detail: 'please fill password!'
       }]
@@ -121,7 +121,7 @@ router.post('/register', function (req, res) {
   }
   if (password !== confirmPassword) {
     return res.status(422).send({
-      erros: [{
+      errors: [{
         title: 'user error',
         detail: 'please check password and confirm password!'
       }]
@@ -133,7 +133,7 @@ router.post('/register', function (req, res) {
   }, function (err, foundUser) {
     if (err) {
       return res.status(422).send({
-        erros: [{
+        errors: [{
           title: 'user error',
           detail: 'something went worng!'
         }]
@@ -141,7 +141,7 @@ router.post('/register', function (req, res) {
     }
     if (foundUser) {
       return res.status(422).send({
-        erros: [{
+        errors: [{
           title: 'user error',
           detail: 'this email already exist!'
         }]
@@ -157,9 +157,9 @@ router.post('/register', function (req, res) {
     user.save(function (err) {
       if (err) {
         return res.status(422).send({
-          erros: [{
+          errors: [{
             title: 'user error',
-            detail: 'this email already exist!'
+            detail: 'something went worng!'
           }]
         })
       }
@@ -176,7 +176,7 @@ router.post('/register', function (req, res) {
 //   Product.findById(productId, function (err, fundProduct) {
 //     if (err) {
 //       return res.status(422).send({
-//         erros: [{
+//         errors: [{
 //           title: 'Product erro',
 //           detail: 'Product not found!'
 //         }]

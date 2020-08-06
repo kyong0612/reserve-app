@@ -21,7 +21,7 @@ router.get('/:productId', function (req, res) {
   Product.findById(productId, function (err, fundProduct) {
     if (err) {
       return res.status(422).send({
-        erros: [{
+        errors: [{
           title: 'Product erro',
           detail: 'Product not found!'
         }]

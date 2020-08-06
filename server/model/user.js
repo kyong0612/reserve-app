@@ -25,6 +25,7 @@ const UserSchema = new Schema({
   }
 });
 
+//パスワード認証
 UserSchema.methods.hasSamePassword = function (inputPassword) {
   const user = this
   return bcrypt.compareSync(inputPassword, user.password)
