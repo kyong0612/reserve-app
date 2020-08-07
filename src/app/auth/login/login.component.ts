@@ -9,9 +9,6 @@ import { Router } from '@angular/router';
     styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-    test: Date = new Date();
-    focus;
-    focus1;
 
     errors: any = {}
     constructor(
