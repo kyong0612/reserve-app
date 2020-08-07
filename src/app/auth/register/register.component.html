@@ -23,48 +23,46 @@
             <form class="register-form" #registerForm="ngForm" (ngSubmit)="register(registerForm)">
 
               <label>お名前</label>
-              <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+              <div class="input-group form-group-no-border">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
                     <i class="nc-icon nc-single-02"></i>
                   </span>
                 </div>
-                <input type="text" class="form-control" placeholder="お名前" (focus)=" focus1=true" (blur)="focus1=false"
-                  ngModel input="name" name="name" required>
+                <input type="text" class="form-control" placeholder="お名前" ngModel input="name" name="name" required>
               </div>
 
               <label>メールアドレス</label>
-              <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+              <div class="input-group form-group-no-border">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
                     <i class="nc-icon nc-email-85"></i>
                   </span>
                 </div>
-                <input type="email" class="form-control" placeholder="メールアドレス" (focus)="focus=true" (blur)="focus=false"
-                  ngModel input="name" name="email"
+                <input type="email" class="form-control" placeholder="メールアドレス" ngModel input="name" name="email"
                   pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
               </div>
 
               <label>パスワード</label>
-              <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+              <div class="input-group form-group-no-border">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
                     <i class="nc-icon nc-key-25"></i>
                   </span>
                 </div>
-                <input type="password" class="form-control" placeholder="パスワード" (focus)="focus1=true"
-                  (blur)="focus1=false" ngModel input="name" name="password" minlength="6" required>
+                <input type="password" class="form-control" placeholder="パスワード" ngModel input="name" name="password"
+                  minlength="6" required>
               </div>
 
               <label>パスワード確認</label>
-              <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+              <div class="input-group form-group-no-border">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
                     <i class="nc-icon nc-key-25"></i>
                   </span>
                 </div>
-                <input type="password" class="form-control" placeholder="パスワード確認" (focus)="focus1=true"
-                  (blur)="focus1=false" ngModel input="name" name="confirmPassword" minlength="6" required>
+                <input type="password" class="form-control" placeholder="パスワード確認" ngModel input="name"
+                  name="confirmPassword" minlength="6" required>
               </div>
 
               <button class="btn btn-danger btn-block btn-round" type="submit"
@@ -85,7 +83,7 @@
         </div>
       </div>
       <div class="footer register-footer text-center">
-        <h6>&copy;{{test | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Creative Tim</h6>
+        <!-- <h6>&copy;{{test | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Creative Tim</h6> -->
       </div>
     </div>
   </div>
