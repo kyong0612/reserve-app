@@ -35,19 +35,19 @@ app.use('/api/v1/users', userRoutes)
 
 if (process.env.NODE_ENV === 'production') {
   // app.dist呼び出し
-  const appPath = path.join(__dirname, '..', 'dist', 'reservation-app')
-  app.use(express.static(appPath))
-  app.get("*", function (req, res) {
-    res.sendFile(Path.resolve(appPath, 'index.html'))
-  })
+  // const appPath = path.join(__dirname, '..', 'dist', 'reservation-app')
+  // app.use(express.static(appPath))
+  // app.get("*", function (req, res) {
+  //   res.sendFile(Path.resolve(appPath, 'index.html'))
+  // })
 }
 
-// // 開発用、npm startにてフルスタック起動
-// const appPath = path.join(__dirname, '..', 'dist', 'reservation-app')
-// app.use(express.static(appPath))
-// app.get("*", function (req, res) {
-//   res.sendFile(Path.resolve(appPath, 'index.html'))
-// })
+// 開発用、npm startにてフルスタック起動
+const appPath = path.join(__dirname, '..', 'dist', 'reservation-app')
+app.use(express.static(appPath))
+app.get("/", function (req, res) {
+  res.sendFile(Path.resolve(appPath, 'index.html'))
+})
 
 
 
