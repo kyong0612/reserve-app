@@ -17,6 +17,7 @@
     "src/app/auth/register/register.component.ts",
     "src/app/auth/shared/auth.service.ts",
     "src/app/auth/auth.module.ts",
-    "src/app/auth/login/login.component.html"
+    "src/app/auth/login/login.component.html",
+    "src/app/auth/shared/auth.interceptor.ts"
   ]
 }

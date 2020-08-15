@@ -6,11 +6,12 @@ const config = require('../config/dev')
 
 
 
-router.get('/test', function (req, res) {
-  res.json({
-    'success': true
-  })
-})
+
+// router.get('/test', function (req, res) {
+//   res.json({
+//     'success': true
+//   })
+// })
 
 //ログイン処理
 router.post('/login', function (req, res) {
