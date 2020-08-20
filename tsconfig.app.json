@@ -18,6 +18,8 @@
     "src/app/auth/shared/auth.service.ts",
     "src/app/auth/auth.module.ts",
     "src/app/auth/login/login.component.html",
-    "src/app/auth/shared/auth.interceptor.ts"
+    "src/app/auth/shared/auth.interceptor.ts",
+    "src/app/coming-soon/coming-soon.module.ts"
+
   ]
 }

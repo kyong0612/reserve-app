@@ -23,7 +23,7 @@
                he
                wouldn't scroll to get here. Add a button if you want the user to see more.</h5>
              <br>
-             <a href="#paper-kit" class="btn btn-danger btn-round">See Details</a>
+             <a href="#paper-kit" class="btn btn-danger btn-round" [routerLink]="['/coming-soon']">See Details</a>
            </div>
          </div>
          <br /><br />
@@ -34,10 +34,10 @@
                  <i class="nc-icon nc-album-2"></i>
                </div>
                <div class="description">
-                 <h4 class="info-title">詳細内容挿入可</h4>
+                 <h4 class="info-title">Picture</h4>
                  <p class="description">{{product.heading1}}
                  </p>
-                 <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+                 <a href="#pkp" class="btn btn-link btn-danger" [routerLink]="['/coming-soon']">See more</a>
                </div>
              </div>
            </div>
@@ -49,7 +49,7 @@
                <div class="description">
                  <h4 class="info-title">New Ideas</h4>
                  <p>{{product.heading2}}</p>
-                 <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+                 <a href="#pkp" class="btn btn-link btn-danger" [routerLink]="['/coming-soon']">See more</a>
                </div>
              </div>
            </div>
@@ -61,7 +61,7 @@
                <div class="description">
                  <h4 class="info-title">Statistics</h4>
                  <p>{{product.heading3}}</p>
-                 <a href="#pkp" class="btn btn-link btn-danger">See more</a>
+                 <a href="#pkp" class="btn btn-link btn-danger" [routerLink]="['/coming-soon']">See more</a>
                </div>
              </div>
            </div>
@@ -145,8 +145,8 @@
    </div>
 
    <!-- FOOTER -->
-   <footer class="container">
+   <!-- <footer class="container">
      <p class="float-right"><a href="#">Back to top</a></p>
      <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-   </footer>
+   </footer> -->
  </div>

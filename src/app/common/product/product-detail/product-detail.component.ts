@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
-
 import { productService } from '../shared/product.service';
 import { error } from '@angular/compiler/src/util';
 

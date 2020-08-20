@@ -24,7 +24,7 @@ router.post('/login', function (req, res) {
     return res.status(422).send({
       errors: [{
         title: 'user error',
-        detail: 'please fill email!'
+        detail: 'メールアドレスを入力してください'
       }]
     })
   }
@@ -33,7 +33,7 @@ router.post('/login', function (req, res) {
     return res.status(422).send({
       errors: [{
         title: 'user error',
-        detail: 'please fill password!'
+        detail: 'パスワードを入力してください'
       }]
     })
   }
@@ -47,7 +47,7 @@ router.post('/login', function (req, res) {
       return res.status(422).send({
         errors: [{
           title: 'user error',
-          detail: 'something went worng!'
+          detail: '入力に誤りがあります'
         }]
       })
     }
@@ -56,7 +56,7 @@ router.post('/login', function (req, res) {
       return res.status(422).send({
         errors: [{
           title: 'user error',
-          detail: 'this email no exist!'
+          detail: 'このアドレスは登録されていません'
         }]
       })
     }
@@ -65,7 +65,7 @@ router.post('/login', function (req, res) {
       return res.status(422).send({
         errors: [{
           title: 'user error',
-          detail: 'password incrected!'
+          detail: 'パスワードが正しくありません'
         }]
       })
     }
@@ -100,7 +100,7 @@ router.post('/register', function (req, res) {
     return res.status(422).send({
       errors: [{
         title: 'user error',
-        detail: 'please fill name!'
+        detail: '名前を入力してください'
       }]
     })
   }
@@ -108,7 +108,7 @@ router.post('/register', function (req, res) {
     return res.status(422).send({
       errors: [{
         title: 'user error',
-        detail: 'please fill email!'
+        detail: 'メールアドレスを入力してください'
       }]
     })
   }
@@ -116,7 +116,7 @@ router.post('/register', function (req, res) {
     return res.status(422).send({
       errors: [{
         title: 'user error',
-        detail: 'please fill password!'
+        detail: 'パスワードを入力してください'
       }]
     })
   }
@@ -124,7 +124,7 @@ router.post('/register', function (req, res) {
     return res.status(422).send({
       errors: [{
         title: 'user error',
-        detail: 'please check password and confirm password!'
+        detail: '入力したパスワードが不一致です'
       }]
     })
   }
@@ -136,7 +136,7 @@ router.post('/register', function (req, res) {
       return res.status(422).send({
         errors: [{
           title: 'user error',
-          detail: 'something went worng!'
+          detail: '入力に誤りがあります'
         }]
       })
     }
@@ -144,7 +144,7 @@ router.post('/register', function (req, res) {
       return res.status(422).send({
         errors: [{
           title: 'user error',
-          detail: 'this email already exist!'
+          detail: 'このメールアドレスは登録されています'
         }]
       })
     }
@@ -160,7 +160,7 @@ router.post('/register', function (req, res) {
         return res.status(422).send({
           errors: [{
             title: 'user error',
-            detail: 'something went worng!'
+            detail: '入力に誤りがあります'
           }]
         })
       }

@@ -7,37 +7,37 @@
           <div class="card card-register">
             <h3 class="title">ログイン</h3>
             <div class="social-line text-center">
-              <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
+              <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon" [routerLink]="['/coming-soon']">
                 <i class="fa fa-facebook-square"></i>
               </a>
-              <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon">
+              <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon" [routerLink]="['/coming-soon']">
                 <i class="fa fa-google-plus"></i>
               </a>
-              <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
+              <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon" [routerLink]="['/coming-soon']">
                 <i class="fa fa-twitter"></i>
               </a>
             </div>
             <form class="register-form" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
               <label>メールアドレス</label>
-              <div class="input-group form-group-no-border" >
+              <div class="input-group form-group-no-border">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
                     <i class="nc-icon nc-email-85"></i>
                   </span>
                 </div>
 
-                <input type="text" class="form-control" placeholder="メールアドレス" 
-                  ngModel input="name" name="email" required>
+                <input type="text" class="form-control" placeholder="メールアドレス" ngModel input="name" name="email"
+                  required>
               </div>
 
               <label>パスワード</label>
-              <div class="input-group form-group-no-border" >
+              <div class="input-group form-group-no-border">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
                     <i class="nc-icon nc-key-25"></i>
                   </span>
                 </div>
-                <input type="password" class="form-control" placeholder="パスワード"  ngModel input="name" name="password">
+                <input type="password" class="form-control" placeholder="パスワード" ngModel input="name" name="password">
               </div>
               <button class="btn btn-danger btn-block btn-round" type="submit"
                 [disabled]="!loginForm.value">ログイン</button>
@@ -45,13 +45,13 @@
 
             <div *ngIf="errors && errors.length">
               <br>
-              <p *ngFor="let error of errors" class="alert alert-warning" style="text-align:center">
+              <p *ngFor="let error of errors" class="alert alert-info" style="text-align:center">
                 {{error.detail}}
               </p>
             </div>
 
             <div class="forgot">
-              <a href="#" class="btn btn-link btn-danger">パスワードお忘れですか？</a>
+              <a href="/register" class="btn btn-link btn-danger">新規会員登録はこちら</a>
             </div>
           </div>
         </div>

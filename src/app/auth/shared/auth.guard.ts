@@ -12,10 +12,8 @@ export class AuthGuard {
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    debugger
     if (this.authService.isAuthticated()) return true;
     // else navigate to login
-    debugger
     this.router.navigate(['/login'])
     return false
   }
