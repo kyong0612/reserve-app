@@ -19,7 +19,8 @@ export class LoginComponent implements OnInit {
     ngOnInit() { }
 
     login(loginForm) {
-        console.log(loginForm.value)
+        // テスト用
+        // console.log(loginForm.value)
         this.authService.longin(loginForm.value).subscribe(
             (token) => {
                 console.log('login success!')
